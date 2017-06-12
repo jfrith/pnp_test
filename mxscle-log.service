@@ -1,0 +1,13 @@
+[Unit]
+Description=ps-watch service to monitor cpu usage of a process
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/root/bin
+ExecStart=/home/root/bin/mxscle-log.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
